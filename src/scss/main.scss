@@ -1,0 +1,24 @@
+// SETTINGS - deklaracje kolorów, fontów, ikon (jako zmienne)
+@import './settings/breakpoints';
+
+// TOOLS - zestaw mixinów oraz funkcji Sass
+@import './tools/mixins';
+
+
+// GENERIC - resetowanie domyślnych stylów, ładowanie fontów
+@import './generic/reset';
+@import './generic/default';
+
+// VENDORS - ładowanie plików z zewnętrznych bibliotek, np. z paczek npm (aby potem całość CSS zamieścić w pojedynczym pliku)
+
+
+// ELEMENTS - wygląd elementów bez przypisanych klas, np, h1, h2, p, button
+
+
+// LAYOUT - klasy struktury strony odpowiedzialne za layout i strukturę, czyli np. header, footer, menu, grid itd
+@import './layout/grid'; 
+
+// COMPONENTS - elementy składowe sekcji, jak np. slider czy lista artykułów
+
+
+// TRUMPS - wszystkie pozostałe, dodatkowe style takie jak np. ukrywanie elementow dla screen-reader

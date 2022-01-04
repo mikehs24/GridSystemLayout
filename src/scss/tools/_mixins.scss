@@ -1,0 +1,17 @@
+@mixin create_grid($prefix) {
+	// Define Individual Grid Classes
+	// $columns: $columns + 1;
+	@for $i from 1 to $columns + 1 {
+		// Calculate grid size in pixels
+		$grid: ($column-width * $i) + ($gutter * ($i - 1));
+
+		// Calculate grid size in percentage
+		$grid: ($grid / $width) * 100%;
+
+		.#{$prefix}-#{$i} {
+			width: $grid;
+			margin-bottom: 2em;
+			border: 1px solid black;
+		}
+	}
+}

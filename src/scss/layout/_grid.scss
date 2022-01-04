@@ -1,0 +1,48 @@
+// Set Grid
+$columns: 12;
+$column-width: 80px;
+$gutter: 20px;
+$padding: $gutter / 2;
+
+// Set container width relative to grid size
+$width: ($column-width * $columns) + ($gutter * ($columns - 1));
+
+// Set Base Container
+.container {
+	width: 100%;
+	max-width: $width;
+	margin: 0 auto;
+	padding: 0 $padding;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 2em auto;
+}
+
+// Generate Grid Classes
+@include create_grid('col');
+
+// Generate additional responsive classes.
+@media screen and (min-width: $xs) {
+	@include create_grid('xs');
+}
+
+@media screen and (min-width: $sm) {
+	@include create_grid('sm');
+}
+
+@media screen and (min-width: $md) {
+	@include create_grid('md');
+}
+
+@media screen and (min-width: $lg) {
+	@include create_grid('lg');
+}
+
+@media screen and (min-width: $xlg) {
+	@include create_grid('xlg');
+}
