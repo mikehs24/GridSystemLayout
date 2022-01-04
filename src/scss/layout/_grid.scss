@@ -15,6 +15,14 @@ $width: ($column-width * $columns) + ($gutter * ($columns - 1));
 	padding: 0 $padding;
 }
 
+// Set Base Full Width Container
+.container-full {
+	width: 100%;
+	margin: 0;
+	padding: 0 $padding;
+}
+
+// Row Container For Columns
 .row {
 	display: flex;
 	justify-content: space-between;
