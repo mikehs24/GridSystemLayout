@@ -7,6 +7,9 @@ $padding: $gutter / 2;
 // Set container width relative to grid size
 $width: ($column-width * $columns) + ($gutter * ($columns - 1));
 
+// Set relative space column gap
+$gutter-percentage: ($gutter / $width) * 100%;
+
 // Set Base Container
 .container {
 	width: 100%;
@@ -25,8 +28,9 @@ $width: ($column-width * $columns) + ($gutter * ($columns - 1));
 // Row Container For Columns
 .row {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
+	column-gap: $gutter-percentage;
 	width: 100%;
 	margin: 2em auto;
 }
